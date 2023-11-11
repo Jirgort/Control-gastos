@@ -1,17 +1,15 @@
-import React from 'react'
-import Gasto from './Gasto'
-const ListadoGastos = ({gastos}) => {
+import React from "react";
+import Gasto from "./Gasto";
+const ListadoGastos = ({ gastos }) => {
   return (
-    <div className='listado-gastos contenedor'>
-      <h2>{gastos.length ? 'gastos':'No hay gastos aun'}</h2>
+    <div className="listado-gastos contenedor">
+      <h2>{gastos.length ? "Gastos" : "No hay gastos aun"}</h2>
 
-      {gastos.map(gasto=>{
-        <Gasto 
-        key={gasto.id}
-        gasto={gasto}/>
-      })}
+      {gastos.map((gasto) => (
+        <Gasto key={gasto.id} gasto={gasto} />
+    ))}
     </div>
-  )
-}
+  );
+};
 
-export default ListadoGastos
+export default ListadoGastos;
